@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact - New</title>
+    <script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <%- include topmenu %>
+      <h1>Contact us</h1>
+      <%- messages() %>
+      <% if(locals.errors){ %>
+      <ul class="alert-danger">
+        <% Object.values(errors).forEach(function(error){ %>
+          <li><%= error.msg %></li>
+        <% }) %>
+      </ul>
+      <% } %>
+      <form class="" action="/contacts" method="post">
+        <div class="form-group row">
+          <div class="form-group col-md-12">
+            <label for="ipFullname">Full name</label>
+            <input type="text" class="form-control" id="ipFullname" name="ipFullname" placeholder="Full name">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="form-group col-md-8">
+            <label for="ipMobile">Mobile</label>
+            <input type="text" class="form-control" id="ipMobile" name="ipMobile" placeholder="0xx-xxx-xxxx">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="ipLine">Line</label>
+            <input type="text" class="form-control" id="ipLine" name="ipLine" placeholder="Line ID">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="form-group col-md-12">
+            <label for="ipEmail">Email address</label>
+            <input type="email" class="form-control" id="ipEmail" name="ipEmail" placeholder="name@example.com">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="form-group col-md-12">
+            <label for="ipMassage">Massage</label>
+            <textarea class="form-control" id="ipMassage" name="ipMassage" rows="3"></textarea>
+          </div>
+          <script>
+            CKEDITOR.replace( 'ipContact' );
+          </script>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-md-12">
+            <a href="/contacts" class="btn btn-secondary">Back</a>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  $(function(){
+    $('#messages').addClass('alert alert-success')
+  })
+</script>

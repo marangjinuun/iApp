@@ -1,0 +1,26 @@
+{
+    "user1" : {
+        "name" : "inuu",
+        "password" : "424168",
+        "company" : "AI",
+        "department" : "ITS",
+        "level" : "8",
+        "id" : 1
+    },
+    "user2" : {
+        "name" : "user2",
+        "password" : "2222",
+        "company" : "AI",
+        "department" : "HRA",
+        "level" : "2",
+        "id" : 2
+    },
+    "user3" : {
+        "name" : "user3",
+        "password" : "3333",
+        "company" : "AI",
+        "department" : "HRA",
+        "level" : "3",
+        "id" : 3
+    }
+}

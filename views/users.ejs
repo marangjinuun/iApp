@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User</title>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <%- include topmenu %>
+      <%- messages() %>
+      <a href="/users/add" class="btn btn-success">Create User</a>
+    </div>
+  </body>
+</html>
+
+<script>
+  $(function(){
+    $('#messages').addClass('alert alert-success')
+  })
+</script>
